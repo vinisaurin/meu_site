@@ -24,6 +24,7 @@ li a, nav a{
     text-align: center;
     transition: all 0.5s;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 a:hover{
@@ -87,7 +88,7 @@ section, footer{
     }
 
     .flex-nav .social{
-        flex: 1 1 50%;
+        flex: 1 1 16.66666665%;
     }
 
 }
@@ -127,18 +128,10 @@ section, footer{
     .top{
         order:2;
     }
-
-    .details{
-        order: 3;
-    }
-
-    .signup{
-        order: 4;
-    }
 }
 
 /* Timeline */
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     #timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
       position: absolute;
       content: "";
@@ -157,233 +150,326 @@ section, footer{
       border-radius: 9px;
       box-shadow: 0px 0px 2px 8px #f7f7f7;
     }
-  }
-  /* Some Cool Stuff */
-  .demo-card:nth-child(1) {
-    order: 1;
-  }
-  
-  .demo-card:nth-child(2) {
-    order: 4;
-  }
-  
-  .demo-card:nth-child(3) {
-    order: 2;
-  }
-  
-  .demo-card:nth-child(4) {
-    order: 5;
-  }
-  
-  .demo-card:nth-child(5) {
-    order: 3;
-  }
-  
-  .demo-card:nth-child(6) {
-    order: 6;
-  }
-  
-  
-  /* Fonts */
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  #timeline {
-    padding: 50px 0;
-    background: none;
-    /* border-top: 1px solid rgba(191, 191, 191, 0.4); */
-    /* border-bottom: 1px solid rgba(191, 191, 191, 0.4); */
-  }
-  #timeline h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 200;
-    margin-bottom: 50px;
-  }
-  #timeline p.leader {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-    margin-bottom: 45px;
-  }
+}
+/* Some Cool Stuff */
+.demo-card:nth-child(1) {
+  order: 1;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(2) {
+  order: 5;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(3) {
+  order: 2;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(4) {
+  order: 6;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(5) {
+  order: 3;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(6) {
+  order: 7;/* Alterar quando adicionar cards */
+}
+
+.demo-card:nth-child(7) {
+  order: 4; /* Alterar quando adicionar cards */
+}
+
+
+/* Fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#timeline {
+  padding: 50px 0;
+  background: none;
+  /* border-top: 1px solid rgba(191, 191, 191, 0.4); */
+  /* border-bottom: 1px solid rgba(191, 191, 191, 0.4); */
+}
+#timeline h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 50px;
+  margin-top: 0px;
+}
+#timeline p.leader {
+  text-align: center;
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 45px;
+}
+#timeline .demo-card-wrapper {
+  position: relative;
+  margin: auto;
+}
+@media (min-width: 1100px) {
   #timeline .demo-card-wrapper {
-    position: relative;
-    margin: auto;
-  }
-  @media (min-width: 1000px) {
-    #timeline .demo-card-wrapper {
-      display: flex;
-      flex-flow: column wrap;
-      width: 1170px;
-      height: 1650px;
-      margin: 0 auto;
-    }
-  }
-  #timeline .demo-card-wrapper::after {
-    z-index: 1;
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    border-left: 1px solid rgba(191, 191, 191, 0.4);
-  }
-  @media (min-width: 1000px) {
-    #timeline .demo-card-wrapper::after {
-      border-left: 1px solid #bdbdbd;
-    }
-  }
-  #timeline .demo-card {
-    position: relative;
-    display: block;
-    margin: 10px auto 80px;
-    max-width: 94%;
-    z-index: 2;
-  }
-  @media (min-width: 480px) {
-    #timeline .demo-card {
-      max-width: 60%;
-      box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
-    }
-  }
-  @media (min-width: 720px) {
-    #timeline .demo-card {
-      max-width: 40%;
-    }
-  }
-  @media (min-width: 1000px) {
-    #timeline .demo-card {
-      max-width: 450px;
-      height: 400px;
-      margin: 90px;
-      margin-top: 45px;
-      margin-bottom: 45px;
-    }
-    #timeline .demo-card:nth-child(odd) {
-      margin-right: 45px;
-    }
-    #timeline .demo-card:nth-child(odd) .head::after {
-      border-left-width: 15px;
-      border-left-style: solid;
-      left: 100%;
-    }
-    #timeline .demo-card:nth-child(odd) .head::before {
-      left: 491.5px;
-    }
-    #timeline .demo-card:nth-child(even) {
-      margin-left: 45px;
-    }
-    #timeline .demo-card:nth-child(even) .head::after {
-      border-right-width: 15px;
-      border-right-style: solid;
-      right: 100%;
-    }
-    #timeline .demo-card:nth-child(even) .head::before {
-      right: 489.5px;
-    }
-    #timeline .demo-card:nth-child(2) {
-      margin-top: 180px;
-    }
-  }
-  #timeline .demo-card .head {
-    position: relative;
     display: flex;
-    align-items: center;
-    color: #fff;
-    font-weight: 400;
+    flex-flow: column wrap;
+    width: 1170px;
+    height: 2500px;  /* Mudar sempre que adicionar projetos a página principal */
+    margin: 0 auto;
   }
-  #timeline .demo-card .head .number-box {
-    display: inline;
-    /* float: left; */
-    margin: 15px;
-    padding: 10px;
-    font-size: 35px;
-    line-height: 35px;
-    font-weight: 600;
-    background: rgba(0, 0, 0, 0.17);
+}
+#timeline .demo-card-wrapper::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid rgba(191, 191, 191, 0.4);
+}
+@media (min-width: 1100px) {
+  #timeline .demo-card-wrapper::after {
+    border-left: 1px solid #bdbdbd;
   }
+}
+#timeline .demo-card {
+  position: relative;
+  display: block;
+  margin: 10px auto 80px;
+  max-width: 94%;
+  z-index: 2;
+  height:420px;
+}
+
+@media (min-width: 480px) {
+  #timeline .demo-card {
+    /* max-width: 72%; */
+    max-width:450px;
+    height: 490px;
+    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+  }
+}
+
+@media (min-width: 720px) {
+  #timeline .demo-card {
+    /* max-width: 47%; */
+    max-width:450px;
+    height: 490px;
+    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+  }
+}
+@media (min-width: 1100px) {
+  #timeline .demo-card {
+    max-width: 450px;
+    height: 500px;  /* Alterar se quiser aumentar o tamanho do card */
+    margin: 90px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    max-height: 540px;
+  }
+  #timeline .demo-card:nth-child(odd) {
+    margin-right: 45px;
+  }
+  #timeline .demo-card:nth-child(odd) .head::after {
+    border-left-width: 15px;
+    border-left-style: solid;
+    left: 100%;
+  }
+  #timeline .demo-card:nth-child(odd) .head::before {
+    left: 491.5px;
+  }
+  #timeline .demo-card:nth-child(even) {
+    margin-left: 45px;
+  }
+  #timeline .demo-card:nth-child(even) .head::after {
+    border-right-width: 15px;
+    border-right-style: solid;
+    right: 100%;
+  }
+  #timeline .demo-card:nth-child(even) .head::before {
+    right: 489.5px;
+  }
+  #timeline .demo-card:nth-child(2) {
+    margin-top: 250px;  /* Alterar se quiser aumentar a distancia entre os cards */
+  }
+}
+#timeline .demo-card .head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+}
+#timeline .demo-card .head .number-box {
+  display: inline;
+  /* float: left; */
+  margin: 15px;
+  padding: 10px;
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.17);
+}
+#timeline .demo-card .head h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: inherit;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-bottom: 6px;
+  line-height: 1rem;
+}
+@media (min-width: 480px) {
   #timeline .demo-card .head h2 {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    font-weight: inherit;
-    letter-spacing: 2px;
-    margin: 0;
-    padding-bottom: 6px;
-    line-height: 1rem;
+    font-size: 165%;
+    line-height: 1.2rem;
   }
-  @media (min-width: 480px) {
-    #timeline .demo-card .head h2 {
-      font-size: 165%;
-      line-height: 1.2rem;
-    }
-  }
+}
+#timeline .demo-card .head h2 span {
+  display: block;
+  font-size: 0.6rem;
+  margin: 0;
+}
+@media (min-width: 480px) {
   #timeline .demo-card .head h2 span {
-    display: block;
-    font-size: 0.6rem;
-    margin: 0;
+    font-size: 0.8rem;
   }
-  @media (min-width: 480px) {
-    #timeline .demo-card .head h2 span {
-      font-size: 0.8rem;
-    }
-  }
+}
+#timeline .demo-card .body {
+  background: #fff;
+  border: 1px solid rgba(191, 191, 191, 0.4);
+  border-top: 0;
+  padding: 10px;
+  height: 77%;
+  position: relative;
+}
+
+@media (min-width: 480px) {
   #timeline .demo-card .body {
-    background: #fff;
-    border: 1px solid rgba(191, 191, 191, 0.4);
-    border-top: 0;
-    padding: 15px;
+    height: 80%;
+    /* height: 400px; Alterar se quiser aumentar o corpo do card*/
   }
-  @media (min-width: 1000px) {
-    #timeline .demo-card .body {
-      height: 315px;
-    }
+}
+
+@media (min-width: 720px) {
+  #timeline .demo-card .body {
+    height: 80%;
+    /* height: 400px; Alterar se quiser aumentar o corpo do card*/
   }
-  #timeline .demo-card .body p {
-    font-size: 14px;
-    color: rgba(0,0,0,0.8);
-    line-height: 18px;
-    margin-bottom: 15px;
+}
+@media (min-width: 1100px) {
+  #timeline .demo-card .body {
+    height: 80%;
+    /* height: 400px; Alterar se quiser aumentar o corpo do card*/
   }
+}
+
+
+#timeline .demo-card .body p {
+  font-size: 14px;
+  color: rgba(0,0,0,0.8);
+  line-height: 18px;
+  margin-bottom: 10px;
+  margin-top:5px;
+}
+@media(max-width:479px){
+  #timeline .demo-card .body p{
+    height: 78px;
+    margin-bottom: 0;
+  }
+}
+
+#timeline .demo-card .body img {
+  display: block;
+  width: 100%;
+  height: 75%; /* Alterar para mudar o tamanho da imagem dentro da imagem */
+}
+
+@media(max-width:479px){
   #timeline .demo-card .body img {
     display: block;
     width: 100%;
+    height: 67%; /* Alterar para mudar o tamanho da imagem dentro da imagem */
   }
-  #timeline .demo-card--step1 {
-    background-color: #46b8e9;
+}
+
+@media(min-width:480px){
+  #timeline .demo-card .body img {
+    display: block;
+    width: 100%;
+    height: 77%; /* Alterar para mudar o tamanho da imagem dentro da imagem */
   }
-  #timeline .demo-card--step1 .head::after {
-    border-color: #46b8e9;
+}
+
+@media(min-width:720px){
+  #timeline .demo-card .body img {
+    display: block;
+    width: 100%;
+    height: 77%; /* Alterar para mudar o tamanho da imagem dentro da imagem */
   }
-  #timeline .demo-card--step2 {
-    background-color: #3ee9d1;
-  }
-  #timeline .demo-card--step2 .head::after {
-    border-color: #3ee9d1;
-  }
-  #timeline .demo-card--step3 {
-    background-color: #ce43eb;
-  }
-  #timeline .demo-card--step3 .head::after {
-    border-color: #ce43eb;
-  }
-  #timeline .demo-card--step4 {
-    background-color: #4d92eb;
-  }
-  #timeline .demo-card--step4 .head::after {
-    border-color: #4d92eb;
-  }
-  #timeline .demo-card--step5 {
-    background-color: #46b8e9;
-  }
-  #timeline .demo-card--step5 .head::after {
-    border-color: #46b8e9;
-  }
-  
-  #timeline .demo-card--step6 {
-    background-color: #3ee9d1;
-  }
-  #timeline .demo-card--step6 .head::after {
-    border-color: #3ee9d1;
-  }
-  
+}
+
+#timeline .demo-card .body>.link-sm {
+  display: flex;
+  justify-content: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  height: 25px;
+}
+
+#timeline .demo-card .body p a {
+  display: inline-block;
+  margin-top: 5px;
+  color: rgba(0,0,0,0.8);
+}
+#timeline .demo-card .body p a:hover{
+  background: rgba(0,0,0,0.05);
+}
+
+#timeline .demo-card--step1 {
+  background-color: #46b8e9;
+}
+#timeline .demo-card--step1 .head::after {
+  border-color: #46b8e9;
+}
+#timeline .demo-card--step2 {
+  background-color: #3ee9d1;
+}
+#timeline .demo-card--step2 .head::after {
+  border-color: #3ee9d1;
+}
+#timeline .demo-card--step3 {
+  background-color: #ce43eb;
+}
+#timeline .demo-card--step3 .head::after {
+  border-color: #ce43eb;
+}
+#timeline .demo-card--step4 {
+  background-color: #4d92eb;
+}
+#timeline .demo-card--step4 .head::after {
+  border-color: #4d92eb;
+}
+#timeline .demo-card--step5 {
+  background-color: #46b8e9;
+}
+#timeline .demo-card--step5 .head::after {
+  border-color: #46b8e9;
+}
+
+#timeline .demo-card--step6 {
+  background-color: #3ee9d1;
+}
+#timeline .demo-card--step6 .head::after {
+  border-color: #3ee9d1;
+}
+
+#timeline .demo-card--step7 {
+  background-color: #ce43eb;
+}
+#timeline .demo-card--step7 .head::after {
+  border-color: #ce43eb;
+}

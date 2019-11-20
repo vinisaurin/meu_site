@@ -24,6 +24,7 @@ li a, nav a{
     text-align: center;
     transition: all 0.5s;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 a:hover{
@@ -87,7 +88,7 @@ section, footer{
     }
 
     .flex-nav .social{
-        flex: 1 1 50%;
+        flex: 1 1 16.66666665%;
     }
 
 }
@@ -126,14 +127,6 @@ section, footer{
 
     .top{
         order:2;
-    }
-
-    .details{
-        order: 3;
-    }
-
-    .signup{
-        order: 4;
     }
 }
 
