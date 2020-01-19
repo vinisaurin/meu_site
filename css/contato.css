@@ -85,6 +85,7 @@ section, footer{
 
     .flex-nav li{
         flex: 1 1 50%;
+        font-size: 22px;
     }
 
     .flex-nav .social{
@@ -96,6 +97,7 @@ section, footer{
 @media all and (max-width:570px){
     .flex-nav li{
         flex-basis: 100%;
+        font-size: 22px;
     }
 
     /* Flex Container */

@@ -226,6 +226,7 @@ color: rgba(0,0,0,0.3);
 
     .flex-nav li{
         flex: 1 1 50%;
+        font-size: 22px;
     }
 
     .flex-nav .social{
@@ -237,6 +238,7 @@ color: rgba(0,0,0,0.3);
 @media all and (max-width:570px){
     .flex-nav li{
         flex-basis: 100%;
+        font-size: 22px;
     }
 
     /* Flex Container */

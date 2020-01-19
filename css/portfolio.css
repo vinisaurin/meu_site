@@ -172,6 +172,12 @@ section, footer{
   text-align: start;
 }
 
+.nav-sidebar{
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid red; */
+}
+
 .sidebar > h2{
   text-align: center;
   color: white;
@@ -187,7 +193,7 @@ section, footer{
   padding-left: 20px;
   margin-right: 20px;
   border-radius: 3px;
-  color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .not-sidebar h2{
@@ -208,11 +214,21 @@ section, footer{
   color: rgba(255, 255, 255, 0.9);
 }
 
-.nav-sidebar{
-  display: flex;
-  flex-direction: column;
-  /* border: 5px solid red; */
+#github-ind{
+  font-size:80%;
 }
+
+#github-ind a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  
+}
+
+#github-ind a:hover{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+}
+
 
 .sb1, .sb2, .sb3{
   display: none;
@@ -247,17 +263,26 @@ section, footer{
 
   .flex-nav li{
       flex: 1 1 50%;
+      font-size: 22px;
   }
 
   .flex-nav .social{
       flex: 1 1 16.66666665%;
   }
 
+  /* .not-sidebar{
+    font-size: 120%;
+  } */
+  
+  /* body{
+    font-size: 120%;
+  } */
 }
 
 @media all and (max-width:570px){
   .flex-nav li{
       flex-basis: 100%;
+      font-size: 22px;
   }
 
   /* Flex Container */
@@ -294,5 +319,17 @@ section, footer{
   .sidebar{
     max-width: 100%;
   }
+
+  .not-sidebar{
+    min-width: 500px;
+  }
+
+  /* .not-sidebar{
+    font-size: 120%;
+  } */
+
+  /* body{
+    font-size: 120%;
+  } */
 
 }

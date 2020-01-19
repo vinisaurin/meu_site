@@ -2,11 +2,22 @@
 <html lang = 'pt-br'>
     <head>
         <title> Sobre mim - Vinícius Saurin</title>
-        <meta name = 'description' content = 'Portfólio de porjetos'>  <!-- Descrição do site -->
+        <meta name = 'description' content = 'Este site tem como objetivo apresentar o portfólio de trabalhos de Vinícius Saurin'>  <!-- Descrição do site -->
         <meta name = 'keywords' content = 'machine-learning machine learning data-science data science'> <!-- Palavras chave para os motores de busca -->
         <meta name = 'robots' content = 'index, follow'> <!-- Google indexa o site -->
         <meta charset= 'utf-8'> <!-- Compreender simbolos do português -->
         <meta name = 'author' content = 'Vinícius Saurin'> <!-- Autor do site -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.viniciussaurin.com.br/sobre.php">
+        <link rel="apple-touch-icon" sizes="180x180" href="/medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/medias/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/medias/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/medias/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/medias/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="/medias/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel = 'stylesheet' href='css/sobre.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/all.min.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/brands.min.css' type = 'text/css'>
@@ -19,10 +30,10 @@
             <nav class="flex-nav">
                 <a href="#" class="toggleNav"> ☰ Menu</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio_crise_diesel.html">Portfólio</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="portfolio_crise_diesel.php">Portfólio</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                     <li class="social">
                         <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
                             <i class="fa fa-linkedin">
@@ -30,7 +41,7 @@
                         </a>
                     </li>
                     <li class="social">
-                            <a href="http://github.com/vinisaurin/">
+                            <a href="https://github.com/vinisaurin/">
                                 <i class="fa fa-github">
                                 </i>
                             </a>
@@ -69,10 +80,10 @@
             <h2>Conheça um pouco sobre mim</h2>
             
             <div class="image">
-                <p><img src="medias/foto_sobre.png" alt="" class="perfil"> Tenho 29 anos, sou natural de Campinas, interior de São Paulo, onde morei até os 11 anos de idade e depois me mudei para Valinhos,
+                <p><img src="medias/foto_sobre.png" alt="Foto perfil" class="perfil"> Tenho 29 anos, sou natural de Campinas, interior de São Paulo, onde morei até os 11 anos de idade e depois me mudei para Valinhos,
                 uma cidade com menos de 150 mil habitantes. </p>
 
-                <p>Tenho 29 anos, no 3º ano do Ensino Médio fui aprovado em algumas universidades (UNESP, USP e UFSCAR) no curso de Engenharia Elétrica, mas preferi não cursar, pois não tinha certeza se era o curso que eu gostaria de fazer.</p>
+                <p>No 3º ano do Ensino Médio fui aprovado em algumas universidades (UNESP, USP e UFSCAR) no curso de Engenharia Elétrica, mas preferi não cursar, pois não tinha certeza se era o curso que eu gostaria de fazer.</p>
             </div>
 
             <p>Então, resolvi fazer um curso pré-vestibular, quando tive um professor que me esclareceu muito as ideias e me indicou o caminho da Estatística.</p>
@@ -140,7 +151,7 @@
 
             <p>Em novembro de 2014, fui aprovado em 2 programas de Trainee dentro do Itaú, o coorporativo e uma outra espécie de trainee mais específico para a área de crédito e cobrança. Como já estava trabalhando na área, resolvi aceitar a segunda oportunidade.</p>
 
-            <p>Durante 1 ano, participei de rotações por todas as áreas que envolvem todo o ciclo de crédito, desde a concessão à cobrança. Foi a ano muito intenso, do qual só tenho boas lembranças.</p>
+            <p>Durante 1 ano, participei de rotações por todas as áreas que envolvem todo o ciclo de crédito, desde a concessão à cobrança. Foi um ano muito intenso, do qual só tenho boas lembranças.</p>
             
             <figure>
                 <img src="medias/torres-itau.png" alt="Centro Empresarial Itaú Unibanco">
@@ -156,14 +167,14 @@
             <div class="overlay">
                 <div class="overlay-inner">
                   <button class="close">× Close</button>
-                  <img src="medias/Recomendation letter.jpeg">
+                  <img src="medias/Recomendation letter.jpeg" alt="Carta de recomendação">
                 </div>
             </div>
 
             <div class="overlaygb">
                 <div class="overlaygb-inner">
                   <button class="closegb">× Close</button>
-                  <img src="medias/six_sigma.png">
+                  <img src="medias/six_sigma.png" alt="Certificado Six-Sigma">
                 </div>
             </div>
 

@@ -2,11 +2,22 @@
 <html lang = 'pt-br'>
     <head>
         <title> Home - Vinícius Saurin</title>
-        <meta name = 'description' content = 'Portfólio de porjetos'>  <!-- Descrição do site -->
+        <meta name = 'description' content = 'Este site tem como objetivo apresentar o portfólio de trabalhos de Vinícius Saurin'>  <!-- Descrição do site -->
         <meta name = 'keywords' content = 'machine-learning machine learning data-science data science'> <!-- Palavras chave para os motores de busca -->
         <meta name = 'robots' content = 'index, follow'> <!-- Google indexa o site -->
         <meta charset= 'utf-8'> <!-- Compreender simbolos do português -->
         <meta name = 'author' content = 'Vinícius Saurin'> <!-- Autor do site -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.viniciussaurin.com.br">
+        <link rel="apple-touch-icon" sizes="180x180" href="/medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/medias/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/medias/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/medias/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/medias/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="/medias/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel = 'stylesheet' href='css/style.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/all.min.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/brands.min.css' type = 'text/css'>
@@ -19,10 +30,10 @@
             <nav class="flex-nav">
                 <a href="#" class="toggleNav"> ☰ Menu</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio_crise_diesel.html">Portfólio</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="portfolio_crise_diesel.php">Portfólio</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                     <li class="social">
                         <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
                             <i class="fa fa-linkedin">
@@ -30,7 +41,7 @@
                         </a>
                     </li>
                     <li class="social">
-                        <a href="http://github.com/vinisaurin/">
+                        <a href="https://github.com/vinisaurin/">
                             <i class="fa fa-github">
                             </i>
                         </a>
@@ -73,30 +84,32 @@
                         <div class="demo-card demo-card--step1">
                             <div class="head">
                                 <div class="number-box">
-                                    <span>08.01</span>
+                                    <span>16.01</span>
                                 </div>
-                                <h2>Crise do Diesel</h2>
+                                <h2>Reinforcement Learning</h2>
                             </div>
                             <div class="body">
-                                <p>A alta dos preços do petróleo devido aos desentendimentos entre EUA e Irã e a consequente subida dos preços do petróleo
-                                    trás à tona novamente o temor por uma nova greve dos caminhoneiros
+                                <p>Esta é uma replicação dos exemplos apresentados no segundo capítulo do livro "Reinforcement Learning: an introduction",
+                                    em adição foram resolvidos alguns exercícios deixados pelos autores.
                                 </p>
-                                <img src="medias/combustiveis/foto_main_page.jpg" alt="Foto">
-                                <p class="link-sm"><a href="portfolio_crise_diesel.html">Saiba mais</a></p>
+                                <img src="medias/RL_Multiarmed_bandit/Rl_agent.png" alt="Foto">
+                                <p class="link-sm"><a href="portfolio_rl_10armedbandit.php">Saiba mais</a></p>
                             </div>
                         </div>
                 
                         <div class="demo-card demo-card--step2">
                             <div class="head">
                                 <div class="number-box">
-                                    <span>02</span>
+                                    <span>08.01</span>
                                 </div>
-                                <h2>Confidence</h2>
+                                <h2>Crise do Diesel</h2>
                             </div>
                             <div class="body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
-                                <p class="link-sm"><a href="#">Saiba mais</a></p>
+                                <p>A alta dos preços do petróleo devido aos desentendimentos entre EUA e Irã e a consequente subida dos preços do petróleo
+                                    trás à tona novamente o temor por uma nova greve dos caminhoneiros.
+                                </p>
+                                <img src="medias/combustiveis/foto_main_page.jpg" alt="Reinforcement Learning">
+                                <p class="link-sm"><a href="portfolio_crise_diesel.php">Saiba mais</a></p>
                             </div>
                         </div>
                 
@@ -109,7 +122,7 @@
                             </div>
                             <div class="body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
+                                <img src="https://placehold.it/1000x500" alt="Graphic">
                                 <p class="link-sm"><a href="#">Saiba mais</a></p>
                             </div>
                         </div>
@@ -123,7 +136,7 @@
                             </div>
                             <div class="body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
+                                <img src="https://placehold.it/1000x500" alt="Graphic">
                                 <p class="link-sm"><a href="#">Saiba mais</a></p>
                             </div>
                         </div>
@@ -137,7 +150,7 @@
                             </div>
                             <div class="body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
+                                <img src="https://placehold.it/1000x500" alt="Graphic">
                                 <p class="link-sm"><a href="#">Saiba mais</a></p>
                             </div>
                         </div>
@@ -151,7 +164,7 @@
                             </div>
                             <div class="body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
+                                <img src="https://placehold.it/1000x500" alt="Graphic">
                                 <p class="link-sm"><a href="#">Saiba mais</a></p>
                             </div>
                         </div>
@@ -164,7 +177,7 @@
                             </div>
                             <div class="body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                                <img src="http://placehold.it/1000x500" alt="Graphic">
+                                <img src="https://placehold.it/1000x500" alt="Graphic">
                                 <p class="link-sm"><a href="#">Saiba mais</a></p>
                             </div>
                         </div>

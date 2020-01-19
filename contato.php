@@ -1,28 +1,43 @@
+<?php
+$msg = 0;
+$msg = $_REQUEST['msg'];
+?>
+
 <!DOCTYPE html>
 <html lang = 'pt-br'>
     <head>
         <title> Entre em contato - Vinícius Saurin</title>
-        <meta name = 'description' content = 'Portfólio de porjetos'>  <!-- Descrição do site -->
+        <meta name = 'description' content = 'Este site tem como objetivo apresentar o portfólio de trabalhos de Vinícius Saurin'>  <!-- Descrição do site -->
         <meta name = 'keywords' content = 'machine-learning machine learning data-science data science'> <!-- Palavras chave para os motores de busca -->
         <meta name = 'robots' content = 'index, follow'> <!-- Google indexa o site -->
         <meta charset= 'utf-8'> <!-- Compreender simbolos do português -->
         <meta name = 'author' content = 'Vinícius Saurin'> <!-- Autor do site -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.viniciussaurin.com.br/contato.php">
+        <link rel="apple-touch-icon" sizes="180x180" href="/medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/medias/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/medias/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/medias/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/medias/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="/medias/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel = 'stylesheet' href='css/contato.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/all.min.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/brands.min.css' type = 'text/css'>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel = 'stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type = 'text/css'>
     </head>
-    <body>
-            
+    <body> 
         <div class="wrapper">
             <nav class="flex-nav">
                 <a href="#" class="toggleNav"> ☰ Menu</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio_crise_diesel.html">Portfólio</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="portfolio_crise_diesel.php">Portfólio</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                     <li class="social">
                         <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
                             <i class="fa fa-linkedin">
@@ -30,7 +45,7 @@
                         </a>
                     </li>
                     <li class="social">
-                            <a href="http://github.com/vinisaurin/">
+                            <a href="https://github.com/vinisaurin/">
                                 <i class="fa fa-github">
                                 </i>
                             </a>
@@ -66,24 +81,31 @@
         </div>
         
         <div class="contatos">
+            <?php if($msg==enviado):?>
+                <h1>Mensagem enviada, agradecemos o seu contato!</h1>
+                   
+            <?php else: ?>
             <section id="contato">
-                <h2>Preencha aqui o formulário</h2>
-                <form action="/contato/" method="POST">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui" required>
-                    <br>
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="Digite seu email aqui" required>
-                    <br>
-                    <label for="telefone">Telefone</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone aqui">
-                    <br>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea rows="4"  name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
-                    <button type="submit">Enviar</button>
-                    <br>
-                </form>
+                <fieldset>
+                    <h2>Preencha aqui o formulário</h2>
+                    <form action="send_email.php" method="POST">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                        <br>
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email" placeholder="Digite seu email" required>
+                        <br>
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone">
+                        <br>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea rows="4"  name="mensagem" id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                        <br>
+                    </form>
+                </fieldset>
             </section>
+            <?php endif; ?>
 
             
             <section id="informacoes">

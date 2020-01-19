@@ -2,11 +2,22 @@
 <html lang = 'pt-br'>
     <head>
         <title> Portfólio - Vinícius Saurin</title>
-        <meta name = 'description' content = 'Portfólio de porjetos'>  <!-- Descrição do site -->
+        <meta name = 'description' content = 'Este site tem como objetivo apresentar o portfólio de trabalhos de Vinícius Saurin'>  <!-- Descrição do site -->
         <meta name = 'keywords' content = 'machine-learning machine learning data-science data science'> <!-- Palavras chave para os motores de busca -->
         <meta name = 'robots' content = 'index, follow'> <!-- Google indexa o site -->
         <meta charset= 'utf-8'> <!-- Compreender simbolos do português -->
         <meta name = 'author' content = 'Vinícius Saurin'> <!-- Autor do site -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="canonical" href="https://www.viniciussaurin.com.br/portfolio_crise_diesel.php">
+        <link rel="apple-touch-icon" sizes="180x180" href="/medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/medias/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/medias/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/medias/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/medias/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="/medias/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel = 'stylesheet' href='css/portfolio.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/all.min.css' type = 'text/css'>
         <link rel = 'stylesheet' href='css/fontawesome-free-5.11.2-web/css/brands.min.css' type = 'text/css'>
@@ -21,10 +32,10 @@
             <nav class="flex-nav">
                 <a href="#" class="toggleNav"> ☰ Menu</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio_crise_diesel.html">Portfólio</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="portfolio_crise_diesel.php">Portfólio</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                     <li class="social">
                         <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
                             <i class="fa fa-linkedin">
@@ -32,7 +43,7 @@
                         </a>
                     </li>
                     <li class="social">
-                            <a href="http://github.com/vinisaurin/">
+                            <a href="https://github.com/vinisaurin/">
                                 <i class="fa fa-github">
                                 </i>
                             </a>
@@ -75,12 +86,12 @@
                         <div class="nav-sidebar">
                             <div class="container-tp container-tp1 open">
                                 <div class="container-img">
-                                    <img src="medias/datascience.svg" alt="">
+                                    <img src="medias/datascience.svg" alt="Ícone Data Science">
                                 </div>
                                 <a href="#" class="toggleNav-sb1 open">Data Science <span>▼</span></a>                 
                             </div>
                             <ul class="sb1 open">
-                                <li> <a href="portfolio_crise_diesel.html" class="link-portfolio"> Crise dos combustíveis</a></li>
+                                <li> <a href="portfolio_crise_diesel.php" class="link-portfolio"> Crise dos combustíveis</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 2</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 3 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4 </a></li>
@@ -90,12 +101,12 @@
                             </ul>
                             <div class="container-tp container-tp2">
                                 <div class="conteiner-img">
-                                    <img src="medias/machine-learning.svg" alt="">
+                                    <img src="medias/machine-learning.svg" alt="Ícone Machine Learning">
                                 </div>
                                 <a href="#" class="toggleNav-sb2">Machine Learning<span>▼</span></a>
                             </div>
                             <ul class="sb2">
-                                <li> <a href="" class="link-portfolio"> Projeto 1</a></li>
+                                <li> <a href="portfolio_rl_10armedbandit.php" class="link-portfolio"> 10-armed bandit problem </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 2</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 3</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4</a></li>
@@ -105,9 +116,9 @@
                             </ul>
                             <div class="container-tp container-tp3">
                                 <div class="container-img">
-                                    <img src="medias/web-development.svg" alt="">
+                                    <img src="medias/asset-management.svg" alt="Ícone Asset Management">
                                 </div>
-                                <a href="#" class="toggleNav-sb3">Web development<span>▼</span></a>
+                                <a href="#" class="toggleNav-sb3">Asset management<span>▼</span></a>
                             </div>                                
                             <ul class="sb3">
                                 <li> <a href="" class="link-portfolio"> Projeto 1</a></li>
@@ -224,6 +235,9 @@
                         </p>
                     </article>
                     <a href="#topo" id="BackToTop">Voltar ao topo</a>
+                    <br>
+                    <br>
+                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/crise_combustivel">github <i class="fa fa-github"></i></a>.</span>
                 </div>
             </div>
         </div>

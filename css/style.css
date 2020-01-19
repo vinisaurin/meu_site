@@ -85,6 +85,7 @@ section, footer{
 
     .flex-nav li{
         flex: 1 1 50%;
+        font-size: 22px;
     }
 
     .flex-nav .social{
@@ -96,6 +97,7 @@ section, footer{
 @media all and (max-width:570px){
     .flex-nav li{
         flex-basis: 100%;
+        font-size: 22px;
     }
 
     /* Flex Container */
@@ -312,17 +314,17 @@ body {
 }
 #timeline .demo-card .head h2 {
   text-transform: uppercase;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   font-weight: inherit;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   margin: 0;
-  padding-bottom: 6px;
+  padding: 6px 0px;
   line-height: 1rem;
 }
 @media (min-width: 480px) {
   #timeline .demo-card .head h2 {
-    font-size: 165%;
-    line-height: 1.2rem;
+    font-size: 150%;
+    line-height: 1.6rem;
   }
 }
 #timeline .demo-card .head h2 span {
@@ -342,6 +344,7 @@ body {
   padding: 10px;
   height: 77%;
   position: relative;
+  text-align: left;
 }
 
 @media (min-width: 480px) {
