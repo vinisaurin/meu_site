@@ -59,6 +59,28 @@ section, footer{
     font-weight: 100;
 }
 
+.intro{
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 1030px;
+  padding:15px;
+  margin:0 auto;
+  line-height: 3rem;
+  font-weight: 200;
+}
+
+.intro a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.intro a:hover{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+}
+
 /*Flex Container*/
 .flex-nav ul{
     border: 1px solid black;
@@ -189,14 +211,14 @@ body {
 }
 
 #timeline {
-  padding: 50px 0;
+  padding: 20px 0;
   background: none;
   /* border-top: 1px solid rgba(191, 191, 191, 0.4); */
   /* border-bottom: 1px solid rgba(191, 191, 191, 0.4); */
 }
 #timeline h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 200;
   margin-bottom: 50px;
   margin-top: 0px;

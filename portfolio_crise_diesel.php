@@ -37,13 +37,13 @@
                     <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="contato.php">Contato</a></li>
                     <li class="social">
-                        <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
+                        <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/" target="_blank">
                             <i class="fa fa-linkedin">
                             </i>
                         </a>
                     </li>
                     <li class="social">
-                            <a href="https://github.com/vinisaurin/">
+                            <a href="https://github.com/vinisaurin/" target="_blank">
                                 <i class="fa fa-github">
                                 </i>
                             </a>
@@ -92,7 +92,7 @@
                             </div>
                             <ul class="sb1 open">
                                 <li> <a href="portfolio_crise_diesel.php" class="link-portfolio"> Crise dos combustíveis</a></li>
-                                <li> <a href="" class="link-portfolio"> Projeto 2</a></li>
+                                <li> <a href="portfolio_web_scraping_rn.php" class="link-portfolio"> Web Scraping</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 3 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 5 </a></li>
@@ -134,7 +134,12 @@
                 </div>
                 <div class="not-sidebar">
                     <h2> A crise dos combustíveis</h2>
-                    <time>08/01/2020</time>
+                    <time class=container-time>
+                        <div class="container-img">
+                            <img src="medias/calendar.svg" alt="Calendário">
+                        </div>    
+                        08/01/2020
+                    </time>
                     <article>
                         <p>
                             A alta dos preços do petróleo devido aos desentendimentos entre EUA e Irã combinada com
@@ -237,7 +242,7 @@
                     <a href="#topo" id="BackToTop">Voltar ao topo</a>
                     <br>
                     <br>
-                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/crise_combustivel">github <i class="fa fa-github"></i></a>.</span>
+                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/crise_combustivel" target="_blank">github <i class="fa fa-github"></i></a>.</span>
                 </div>
             </div>
         </div>

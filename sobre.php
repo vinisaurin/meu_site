@@ -35,13 +35,13 @@
                     <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="contato.php">Contato</a></li>
                     <li class="social">
-                        <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/">
+                        <a href="https://www.linkedin.com/in/vinicius-saurin-594352197/" target="_blank">
                             <i class="fa fa-linkedin">
                             </i>
                         </a>
                     </li>
                     <li class="social">
-                            <a href="https://github.com/vinisaurin/">
+                            <a href="https://github.com/vinisaurin/" target="_blank">
                                 <i class="fa fa-github">
                                 </i>
                             </a>
