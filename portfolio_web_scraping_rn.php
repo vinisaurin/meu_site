@@ -195,7 +195,7 @@
                             até encontrar a página que não possui este botão, inferindo que esta seja a última página. No vídeo abaixo você pode verificar todo o processo realizado pelo <i>Selenium</i>.
                             
                         </p>
-                        <iframe width="905" height="435" src="https://www.youtube.com/embed/QdlwmgcSE4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/QdlwmgcSE4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </article>
                     <a href="#topo" id="BackToTop">Voltar ao topo</a>
                     <br>
