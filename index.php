@@ -89,6 +89,24 @@
                     <div class="demo-card demo-card--step1">
                         <div class="head">
                             <div class="number-box">
+                                <span>30.01</span>
+                            </div>
+                            <h2>Segurança Pública RJ</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                Trabalho que apresenta uma diversidade de dados sobre o estado da segurança pública no Estado do Rio de Janeiro,
+                                entre 2013 e 2019, inclusive durante o período de intervenção federal.
+                            </p>
+                            <img src="medias/seg_pub_rj/main-page.jpg" alt="Foto">
+                            <figcaption style="color:black; font-size:55%">Imagem de Werner Moser por Pixabay</figcaption>
+                            <p class="link-sm"><a href="portfolio_seg_pub_rj.php">Saiba mais</a></p>
+                        </div>
+                    </div>
+            
+                    <div class="demo-card demo-card--step2">
+                    <div class="head">
+                            <div class="number-box">
                                 <span>21.01</span>
                             </div>
                             <h2>Web Scraping</h2>
@@ -104,7 +122,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step2">
+                    <div class="demo-card demo-card--step3">
                         <div class="head">
                             <div class="number-box">
                                 <span>16.01</span>
@@ -121,7 +139,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step3">
+                    <div class="demo-card demo-card--step4">
                         <div class="head">
                             <div class="number-box">
                                 <span>08.01</span>
@@ -135,20 +153,6 @@
                             </p>
                             <img src="medias/combustiveis/foto_main_page.jpg" alt="Crise do Diesel">
                             <p class="link-sm"><a href="portfolio_crise_diesel.php">Saiba mais</a></p>
-                        </div>
-                    </div>
-            
-                    <div class="demo-card demo-card--step4">
-                        <div class="head">
-                            <div class="number-box">
-                                <span>04</span>
-                            </div>
-                            <h2>Consistency</h2>
-                        </div>
-                        <div class="body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                            <img src="https://placehold.it/1000x500" alt="Graphic">
-                            <p class="link-sm"><a href="#">Saiba mais</a></p>
                         </div>
                     </div>
             

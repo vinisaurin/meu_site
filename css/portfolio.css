@@ -246,6 +246,10 @@ section, footer{
   background-color: transparent;
 }
 
+#ref{
+  font-size:80%;
+}
+
 iframe{
   padding: 20px 0;
 }

@@ -93,7 +93,7 @@
                             <ul class="sb1 open">
                                 <li> <a href="portfolio_crise_diesel.php" class="link-portfolio"> Crise dos combustíveis</a></li>
                                 <li> <a href="portfolio_web_scraping_rn.php" class="link-portfolio"> Web Scraping</a></li>
-                                <li> <a href="" class="link-portfolio"> Projeto 3 </a></li>
+                                <li> <a href="portfolio_seg_pub_rj.php" class="link-portfolio"> Segurança Pública RJ </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 5 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 6 </a></li>
