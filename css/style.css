@@ -238,7 +238,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     width: 1170px;
-    height: 2500px;  /* Mudar sempre que adicionar projetos a página principal */
+    height: 2000px;  /* Mudar sempre que adicionar projetos a página principal */
     margin: 0 auto;
   }
 }

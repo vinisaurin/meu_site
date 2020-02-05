@@ -89,6 +89,24 @@
                     <div class="demo-card demo-card--step1">
                         <div class="head">
                             <div class="number-box">
+                                <span>05.02</span>
+                            </div>
+                            <h2>Matriz de Covariância</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                Estudo sobre a estimação da tão famosa matriz de covariância no mundo do Asset Management. Serão apresentados métodos que embora comuns 
+                                são eficientes e amplamente utilizados na indústria.
+                            </p>
+                            <img src="medias/cov_matrix_p1/main-page.png" alt="Foto">
+                            <figcaption style="color:black; font-size:55%">Photo by theilr on Flickr</figcaption>
+                            <p class="link-sm"><a href="portfolio_cov_matrix_p1.php">Saiba mais</a></p>
+                        </div>
+                    </div>
+            
+                    <div class="demo-card demo-card--step2">
+                    <div class="head">
+                            <div class="number-box">
                                 <span>30.01</span>
                             </div>
                             <h2>Segurança Pública RJ</h2>
@@ -104,8 +122,8 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step2">
-                    <div class="head">
+                    <div class="demo-card demo-card--step3">
+                        <div class="head">
                             <div class="number-box">
                                 <span>21.01</span>
                             </div>
@@ -116,13 +134,13 @@
                                 Este trabalho apresenta um método de web scraping entre muitos possíveis. Ele contorna um problema que 
                                 o site de interesse mostrou ao usar métodos tradicionais de raspagem de dados.
                             </p>
-                            <img src="medias/web_scraping_rn/main_page.jpg" alt="Foto">
+                            <img src="medias/web_scraping_rn/main_page_small.jpg" alt="Foto">
                             <figcaption style="color:black; font-size:55%">Photo by Markus Spiske on Unsplash</figcaption>
                             <p class="link-sm"><a href="portfolio_web_scraping_rn.php">Saiba mais</a></p>
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step3">
+                    <div class="demo-card demo-card--step4">
                         <div class="head">
                             <div class="number-box">
                                 <span>16.01</span>
@@ -139,7 +157,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step4">
+                    <div class="demo-card demo-card--step5">
                         <div class="head">
                             <div class="number-box">
                                 <span>08.01</span>
@@ -155,22 +173,8 @@
                             <p class="link-sm"><a href="portfolio_crise_diesel.php">Saiba mais</a></p>
                         </div>
                     </div>
-            
-                    <div class="demo-card demo-card--step5">
-                        <div class="head">
-                            <div class="number-box">
-                                <span>05</span>
-                            </div>
-                            <h2>Conversion</h2>
-                        </div>
-                        <div class="body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                            <img src="https://placehold.it/1000x500" alt="Graphic">
-                            <p class="link-sm"><a href="#">Saiba mais</a></p>
-                        </div>
-                    </div>
 
-                    <div class="demo-card demo-card--step6">
+                    <!-- <div class="demo-card demo-card--step6">
                         <div class="head">
                             <div class="number-box">
                                 <span>06</span>
@@ -182,8 +186,8 @@
                             <img src="https://placehold.it/1000x500" alt="Graphic">
                             <p class="link-sm"><a href="#">Saiba mais</a></p>
                         </div>
-                    </div>
-                    <div class="demo-card demo-card--step7">
+                    </div> -->
+                    <!-- <div class="demo-card demo-card--step7">
                         <div class="head">
                             <div class="number-box">
                                 <span>07</span>
@@ -195,7 +199,7 @@
                             <img src="https://placehold.it/1000x500" alt="Graphic">
                             <p class="link-sm"><a href="#">Saiba mais</a></p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>        
         </div>
