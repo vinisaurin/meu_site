@@ -134,110 +134,109 @@
                     </ul>
                 </div>
                 <div class="not-sidebar">
-                    <h2> A segurança pública no Estado do Rio de Janeiro</h2>
+                    <h2> O problema da estimação da matriz de covariância</h2>
                     <time class=container-time>
                         <div class="container-img">
                             <img src="medias/calendar.svg" alt="Calendário">
                         </div>    
-                        30/01/2020
+                        05/02/2020
                     </time>
                     <article>
-                        <h3>Histórico</h3>
                         <p>
-                            Não é de hoje que grupos armados controlam vastas áreas urbanas no Rio de Janeiro, impedindo o acesso 
-                            da polícia e do poder público. Foi na década de 1980 que o varejo do tráfico de drogas na cidade se 
-                            organizou, a partir do controle territorial das favelas, gerando disputas entre os próprios grupos 
-                            armados e com a polícia. A intervenção do estado baseava-se em um modelo militar de invasões periódicas 
-                            dos territórios na tentativa de recuperá-los. O resultado eram índices de mortes cometidas por policiais 
-                            sem precedentes e um aumento exponencial das taxas de homicídio, que chegaram a figurar entre as piores 
-                            do país.<sup>1</sup>
+                            No mundo de gestão de ativos é de conhecimento geral que embora seja muito difícil prever os retornos dos ativos, existem métodos muito
+                            mais robustos para a estimação da matriz de variância-covariância ou apenas matriz de covariância. Neste trabalho apresentaremos desde 
+                            métodos mais simples como o amostral até métodos mais complexos e amplamente utilizados na indústria do <i>Asset Management.</i>
                         </p>
+                        <h3>Os dados</h3>
                         <p>
-                            Em Dezembro de 2008, durante o primeiro mandato de Sérgio Cabral como Governador, foi instalada a primeira
-                            Unidade de Polícia Pacificadora (UPP). A estratégia tinha como objetivo a instalação de unidades dentro das 
-                            comunidades e os policiais fariam um policiamento inspirado nos princípios da polícia comunitária ou de 
-                            proximidade, fundamentados na presença constante e proatividade dos policiais e na descentralização da resolução 
-                            de conflitos.
+                            Os dados utilizados foram retirados do site <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" target="_blank">Fama & French</a> e 
+                            reporta os retornos de cada tipo de indústria nas Bolsas de Valores americanas, sendo que é dado pesos iguais para cada ação constituinte da respectiva indústria.
+                            Para a nossa análise utilizaremos os dados mensais a partir do ano de 1980. Em todos os métodos será utilizada uma janela dos últimos 60 meses ou 5 anos para a 
+                            estimação da matriz de covariâncias.
                         </p>
-                        <p>
-                            Durante os primeiros anos, os índices de violência nas comunidades com UPPs começaram a melhorar e pesquisas apontavam
-                            a aprovação dos moradores. Entretanto, a partir de 2014 os indicadores voltaram a piorar e os pesquisadores já haviam
-                            constatado um abandono completo da abordagem de proximidade e o retorno do policiamento repressivo.
+                        <h3>Método amostral</h3>
+                        <p> O método amostral como o próprio nome diz utiliza apenas das amostras dos retornos para fazer a estimativa. Portanto, dada a matriz de retornos <i>X</i>, a matriz
+                            de covariância é calculada da seguinte forma:
+                                $$ \hat{\Sigma} = \frac{1}{n-1} X'X  $$ 
                         </p>
-                        <h3>O projeto e os dados</h3>
+                        <h3>Constant Correlation Model</h3>
                         <p>
-                            Neste trabalho daremos foco a visualização geoespacial dos dados disponibilizados pelo Instituto de Segurança Pública,
-                            autarquia vinculada diretamente à Vice-Governadoria do Estado, criada no ano de 1999. Os dados utilizados reportam os
-                            números de 2013 a 2019, segregados entre Regiões e Áreas Integradas. Abaixo estão os mapas do estado do Rio de Janeiro
-                            segmentado por 4 regiões e por 39 áreas integradas, respectivamente.
-                            <img src="medias/seg_pub_rj/Regiões.png" alt="Regiões">
-                            <img src="medias/seg_pub_rj/AreasIntegradas.png" alt="Áreas Integradas">
-                        </p>
-                        <h3>Análise</h3>
-                        <p>
-                            Abaixo está o Box-Plot apresentando a distribuição de cada tipo de crime por região. O interior é a região que possui todos
-                            quase todas as distribuições com todos os quartis inferiores, com a única exceção das drogas. Uma justificativa plausível é
-                            que como os registros de drogas dependem de alguma ação policial, a região que possui menor criminalidade em relação aos outros
-                            tipos de crimes, possibilita uma atuação mais ativa das polícias para coibir o tráfico de drogas.
-                            <img src="medias/seg_pub_rj/boxplot.png" alt="Box-plot">
-                            Por outro lado, as regiões da capital e da baixada fluminense se destacam negativamente com as maiores médias em todos os outros delitos.
-                            Enquanto na Capital o número de furtos e outros crimes contra o patrimônio são superiores as demais regiões, na região da baixada fluminense
-                            os crimes de roubo e violentos se destacam no topo, o que confirma a teoria de que a baixada fluminense é sem dúvida a região mais violenta do
-                            estado.
-                        </p>
-                        <p>
-                            A seguir está o gráfico de barras empilhado com a evolução anual das diferentes espécies de roubos por região. Note que em todas as regiões o pico 
-                            do total de crimes foi alcançado no ano de 2017. O tipo de roubo que mais se destaca em todas as regiões é o roubo a transeunte que é aquele roubo
-                            muito mostrado em vídeos nos telejornais, caracterizado por assalto a indivíduos que são abordados enquanto transitam em vias públicas com subtração 
-                            de pertences de forma violenta. Entretanto, são os outros roubos que têm maior aumento no período, por exemplo na região da capital, teve um aumento
-                            de 186% no período de 2013 a 2017. 
-                            <img src="medias/seg_pub_rj/total_roubos.png" alt="Evolução anual total de roubos">
-                        </p>
-                        <p>
-                            Os outros tipos de crimes estão detalhados nesta <a id="gallery" class="swipebox" href="#">galeria</a>. É importante ressaltar que neste mesmo período
-                            os crimes de furto e violentos tiveram redução significativa. Na região da baixada fluminense, houve uma redução de 36% nos furtos transeuntes e de
-                            lesões corporais dolosas.
-                        </p>
-                        <p>
-                            Para melhor visualizarmos estes dados, abaixo está apresentado o mapa do estado com incidência (números normalizados) de cada espécie crime nos anos de 2013 e 2019. 
-                            É possível perceber que há duas áreas pertencentes à região da baixada fluminense que está entre as primeiras em número de ocorrência em quase todas as categorias de
-                            crime. Essas duas áreas são Duque de Caxias e Nova Iguaçu, e além delas está a área de Niterói e São Gonçalo que estão entre as primeiras em número de roubos 
-                            e crimes violentos. Na capital, os destaques negativos são principalmente para a área do centro que estão em primeiro lugar em furtos e outros crimes contra o patrimônio.
-                            <img src="medias/seg_pub_rj/incidencia_2013.png" alt="Incidência dos crimes em 2013">
-                            <img src="medias/seg_pub_rj/incidencia_2019.png" alt="Incidência dos crimes em 2019">
-                        </p>
-                        <p>
-                            No gráfico a seguir está a alteração percentual das categorias de crimes no período de 2013 a 2019. As áreas mais claras sinalizam que houve redução no número do ocorrências,
-                            enquanto que as áreas mais escuras apresentam um aumento percentual na incidência dos crimes. As três primeiras áreas em relação ao aumento no número de roubos pertencem à Capital,
-                            e em primeiro lugar está a área que inclui parte da Tijuca, Grajaú e Vila Isabel, com aumento de 184%, ou seja, quase triplicou o número de roubos. Em relação aos crimes violentos, 
-                            o município de Petrópolis está no topo, com um aumento de 20%. Na outra ponta do ranking, a área com maior redução no número de crimes violentos é a área que inclui a Mangueira, 
-                            São Cristóvão, Maracanã, com redução de mais de 50%. Além disso, essa mesma área também é destaque positivo na redução do total de furtos em mais de 44%.
-                        
-                            <img src="medias/seg_pub_rj/alteracao_2013_2019.png" alt="Alteração percentual entre 2013 e 2019">
+                            Neste modelo, assume-se que todos os coeficientes de correlação são iguais, portanto os termos da matriz de covariância fora das diagonais são calculados da seguinte maneira:
+                                $$ \hat{\sigma}_{ij} = \hat{\sigma_i}\hat{\sigma_j}\hat{\rho}$$
+                                $$ \hat{\rho} = \frac{1}{N(N-1)}\sum_{i,j=1}^N \hat{\rho}_{ij}$$ 
+                            para todo \(i \ne j\).
+
                         </p>
 
-                        <p>
-                            Por fim, faremos uma análise especificamente do período da intervenção federal no estado do Rio de Janeiro. A medida tomada em 2018 foi decisão do Governo Federal de intervir na
-                            autonomia do estado fluminense. Foi decretada com o objetivo de amenizar a situação da segurança interna por meio do Decreto nº 9.288, de 16 de fevereiro de 2018 outorgado pelo então 
-                            presidente Michel Temer e teve seu fim em 31 de dezembro de 2018.
+                        <h3>Shrinkage</h3>
                             
+                        <p>
+                            De forma generalizada, analisando o <i>paper Honey, I Shrunk the Sample Covariance Matrix</i> de Ledoit, O. e Wolf, M., podemos dizer que a ideia é mesclar um modelo simples como 
+                            o método amostral que tem a vantagem de ser não viesado com qualquer outro modelo mais estruturado, o qual no nosso caso será o <i>Constant Correlation Model</i>. Desta forma, a 
+                            matriz de covariância é calculada conforme descrito abaixo:
+                                $$ \hat{\Sigma}_{Shrink} = \hat{\delta}^* F + (1-\hat{\delta}^*)S$$
+                            onde F é o modelo que decidimos mesclar, S é a matriz de covariância amostral e \(\hat{\delta}^* \in [0,1]\). 
+                        </p>
+
+                        <h3>Média móvel ponderada exponencialmente</h3>
+                        <p>
+                            Assumindo que a volatilidade dos retornos dos ativos não é estacionária, não podemos ponderar da mesma forma retornos muito antigos e retornos mais recentes, portanto 
+                            uma das alternativas é usar a média móvel ponderada exponencialmente, a qual atribui maiores pesos aos retornos mais recentes e é dada pela seguinte forma:
+                                $$ \sigma_T^2 = \sum_{t=1}^T \alpha_t R_t^2 $$
+                                onde $$\alpha_t = \frac{\lambda^{T-t}}{\sum_{t=1}^T \lambda^{T-t}}$$
+                            \(\lambda\) é o parâmetro de decaimento que está entre 0 e 1, isto é, quanto menor \(\lambda\) menor é o peso atribuído aos retornos mais antigos, \(R_t\) é o retorno
+                            no tempo \(t\) e \(\alpha_t\) é o peso para o tempo \(t\).
+                        </p>
+                        <h3>Modelos GARCH (Generalized Autoregressive Conditional Heteroskedacity)</h3>
+                        <p>
+                            Historicamente, os modelos ARCH foram uma alternativa de primeira linha desenvolvida para competir com as médias exponenciais e uma rápida olhada em sua forma funcional revela o porquê. 
+                            Assumindo retornos com média zero, sua estrutura é muito simples:
+                                $$ \sigma_T^2 = \gamma V_L + \sum_{t+1}^T \alpha_t R_t^2$$
+                                onde $$\gamma + \sum_{t+1}^T \alpha_t = 1$$
+                            e \(V_L\) é um termo que representa a variância de longo prazo.Já os modelos tipo GARCH tem um pequeno aperfeiçoamento que é a adição de um termo que relaciona a volatilidade do tempo 
+                            \(t\) com a volatilidade do tempo \(t-1\), como apresentado a seguir:
+                                $$ \sigma_T^2 = \gamma V_L + \sum_{t+1}^T \alpha_t R_t^2 + \beta \sigma_{T-1}^2$$
+                        </p>
+
+                        <h3> Modelos ortogonais</h3>
+                            Os modelos ortogonais aplicados aos métodos de média móvel ponderada exponencialmente e ao método GARCH são uma pequena variação, na qual é feita um preprocessamento dos dados, aplicando
+                            o método estatístico de análise multivariada PCA (Principal Component Analysis), o qual transforma a matriz dos retornos em uma matriz de vetores ortogonais, em outras palavras, torna os
+                            retornos não correlacionados.
+
+                        <h3>Resultados</h3>
+                        <p>
+                            Examinando a tabela abaixo, podemos dizer que o modelo com a estimativa de matriz de covariância via média móvel ponderada exponencialmente em sua versão ortogonal possui maior retorno 
+                            anualizado e maior <i>sharpe ratio</i>, seguido diretamente pela sua versão tradicional. O ganho destes modelos em relação a <i>sharpe Ratio</i> quando comparados ao portfólio com todos
+                            os pesos iguais (EW) e ao portfólio com a estimativa amostral foi de quase 80% e 7%, respectivamente.
+                            <img src="medias/cov_matrix_p1/tabela.png" alt="Tabela com estatísticas">
                         </p>
                         <p>
-                            Na figura abaixo, está o gráfico de barras empilhadas 100% que demonstra a evolução da distribuição dos tipos de crimes cometidos mensalmente na Baixada Fluminense (as outras regiões estão na
-                            <a id="gallery2" class="swipebox" href="#">galeria</a>). Por exemplo, no ano de 2017 os furtos na Baixada Fluminense aumentaram 45%, mas em relação a todas as categorias de delitos o aumento 
-                            foi de apenas 15%. Por outro lado, durante a intervenção este mesmo tipo de crime teve uma redução pequena de apenas 8%, enquanto que os crimes violentos se mantiveram no mesmo patamar. Ou 
-                            seja, com exceção dos roubos que tiveram uma redução de mais de 20% em números absolutos e 8% em números relativos, os outros delitos se mantiveram no mesmo patamar ou tiveram redução 
-                            insignificante durante a intervenção federal. Uma explicação razoável é que com o exército nas ruas intimida-se mais os roubos de transeuntes, a espécie de roubo mais cometida no estado, mas 
-                            não inibe os furtos e os outros crimes. Portanto, é aceitável concluir que a intervenção federal não teve efeito generalizado, mas em algumas poucas espécies de delitos.
-                            <img src="medias/seg_pub_rj/Gráfico_barras_empilhadas_Baixada_Fluminense.png" alt="Evolução da distribuição dos tipos de crimes">
+                            Em terceiro e quarto lugares estão a estimativa amostral e o modelo GARCH, respectivamente. É importante notar que o retorno anualizado do modelo GARCH não foi muito inferior aos modelos de média móvel, o 
+                            que deixou a sua <i>sharpe ratio </i> em nível inferior foi a sua maior volatilidade, o que seria um sinal de que não cumpriu bem o seu papel. Entretanto, se nos atentarmos ao gráfico abaixo o modelo GARCH 
+                            conseguiu uma recuperação bem mais acelerada que os outros modelos após a crise dos <i>sub-primes</i> em 2009 e isto foi muito devido ao fato de que este modelo possui um número efetivo de constituintes (ENC 
+                            na tabela) muito maior que os seus concorrentes. Quando o mercado mergulha em uma crise profundo assim como ocorreu em 2009, as correlações entre os ativos aumentam significativamente, portanto um portfólio 
+                            mais diversificado, que é o caso do modelo GARCH, consegue um resultado mais rápido.
+                            <img src="medias/cov_matrix_p1/CovarianceMatrix.png" alt="Retornos Acumulados">
                         </p>
-                        <span id="ref"><sup>1</sup>https://exame.abril.com.br/brasil/a-falencia-das-upps/</span>
+                        <p>
+                            Os modelos ortogonais proporcionaram uma melhora em ambos os casos, média ponderada e GARCH, em relação a <i>sharpe ratio</i>, mas a melhora não foi tão significativa no caso da média ponderada, enquanto que
+                            para o modelo GARCH houve um aumento de 30%. Um segundo aperfeiçoamento no modelo GARCH foi considerar que os retornos não possuem distribuição Gaussiana, mas sim skewed T-student, isto é, uma distribuição 
+                            T-student com assimetria, o que representa melhor os dados de retornos de ações, pois como se pode ver na coluna <i>Skewness</i> da tabela acima todos os métodos possuem valores negativos e alguns próximos de -1,
+                            sendo que a distribuição Normal possui <i>skewness</i> igual a 0. O método Garch Ortogonal proporcionou uma melhora adicional de quase 6% na <i>sharpe ratio</i>, quando comparado com a sua versão tradicional.
+                        </p>
+                        <p>
+                            Por fim, é natural dizer que caso a nossa amostra tivesse fim no ano de 2015, o melhor modelo seria o GARCH. Portanto, não é possível dizer que existe um modelo que é superior a todos os outros, soberano. Cada 
+                            tipo de estimativa tem melhor performance em cenários específicos, nos deixando uma oportunidade para em um posterior trabalho fazer uma previsão de mudanças nos regimes econômicos e mesclar os modelos de estimativa 
+                            da matriz de covariância para encontrar em qual regime cada um dos modelos se encaixa melhor.
+                        </p>
+                        
+
                     </article>
                     <br>
                     <a href="#topo" id="BackToTop">Voltar ao topo</a>
                     <br>
                     <br>
-                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/public_safety_rj" target="_blank">github <i class="fa fa-github"></i></a>.</span>
+                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/covariance_matrix" target="_blank">github <i class="fa fa-github"></i></a>.</span>
                 </div>
             </div>
         </div>
@@ -245,8 +244,11 @@
             <p> Vinícius Saurin &copy; 2020</p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="js/jquery-2.1.0.js"></script>
         <script src="js/jquery.swipebox.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>
             $(function() {
                 $('.toggleNav').on('click', function(){
