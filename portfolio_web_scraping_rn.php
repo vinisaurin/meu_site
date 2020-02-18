@@ -107,6 +107,7 @@
                             </div>
                             <ul class="sb2">
                                 <li> <a href="portfolio_rl_10armedbandit.php" class="link-portfolio"> 10-armed bandit problem </a></li>
+                                <li> <a href="portfolio_text_class.php" class="link-portfolio"> Classificação de textos </a></li>
                                 <!-- <li> <a href="" class="link-portfolio"> Projeto 2</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 3</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4</a></li>

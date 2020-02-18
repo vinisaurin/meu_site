@@ -89,6 +89,23 @@
                     <div class="demo-card demo-card--step1">
                         <div class="head">
                             <div class="number-box">
+                                <span>16.02</span>
+                            </div>
+                            <h2>Classificação de textos</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                Projeto que aplica diversas técnicas de <i>Machine Learning</i>, como SVC e XGBoost, ao problema de classificação de genêro
+                                dos artigos escritos pela BBC.
+                            </p>
+                            <img src="medias/text_class/cloud_total.png" alt="Foto">
+                            <p class="link-sm"><a href="portfolio_text_class.php">Saiba mais</a></p>
+                        </div>
+                    </div>
+            
+                    <div class="demo-card demo-card--step2">
+                        <div class="head">
+                            <div class="number-box">
                                 <span>05.02</span>
                             </div>
                             <h2>Matriz de Covariância</h2>
@@ -104,8 +121,8 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step2">
-                    <div class="head">
+                    <div class="demo-card demo-card--step3">
+                        <div class="head">
                             <div class="number-box">
                                 <span>30.01</span>
                             </div>
@@ -122,7 +139,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step3">
+                    <div class="demo-card demo-card--step4">
                         <div class="head">
                             <div class="number-box">
                                 <span>21.01</span>
@@ -140,7 +157,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step4">
+                    <div class="demo-card demo-card--step5">
                         <div class="head">
                             <div class="number-box">
                                 <span>16.01</span>
@@ -156,8 +173,8 @@
                             <p class="link-sm"><a href="portfolio_rl_10armedbandit.php">Saiba mais</a></p>
                         </div>
                     </div>
-            
-                    <div class="demo-card demo-card--step5">
+
+                    <div class="demo-card demo-card--step6">
                         <div class="head">
                             <div class="number-box">
                                 <span>08.01</span>
@@ -173,20 +190,6 @@
                             <p class="link-sm"><a href="portfolio_crise_diesel.php">Saiba mais</a></p>
                         </div>
                     </div>
-
-                    <!-- <div class="demo-card demo-card--step6">
-                        <div class="head">
-                            <div class="number-box">
-                                <span>06</span>
-                            </div>
-                            <h2>Conversion</h2>
-                        </div>
-                        <div class="body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                            <img src="https://placehold.it/1000x500" alt="Graphic">
-                            <p class="link-sm"><a href="#">Saiba mais</a></p>
-                        </div>
-                    </div> -->
                     <!-- <div class="demo-card demo-card--step7">
                         <div class="head">
                             <div class="number-box">
