@@ -109,8 +109,7 @@
                             <ul class="sb2">
                                 <li> <a href="portfolio_rl_10armedbandit.php" class="link-portfolio"> 10-armed bandit problem </a></li>
                                 <li> <a href="portfolio_text_class.php" class="link-portfolio"> Classificação de textos </a></li>
-                                <!-- <li> <a href="" class="link-portfolio"> Projeto 2</a></li>
-                                <li> <a href="" class="link-portfolio"> Projeto 3</a></li>
+                                <!-- <li> <a href="" class="link-portfolio"> Projeto 3</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 4</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 5</a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 6</a></li>
@@ -135,109 +134,100 @@
                     </ul>
                 </div>
                 <div class="not-sidebar">
-                    <h2> O problema da estimação da matriz de covariância</h2>
+                    <h2> Problema da classificação dos genêros de artigos da BBC</h2>
                     <time class=container-time>
                         <div class="container-img">
                             <img src="medias/calendar.svg" alt="Calendário">
                         </div>    
-                        05/02/2020
+                        16/02/2020
                     </time>
                     <article>
+                        <h3>Problema</h3>
                         <p>
-                            No mundo de gestão de ativos é de conhecimento geral que embora seja muito difícil prever os retornos dos ativos, existem métodos muito
-                            mais robustos para a estimação da matriz de variância-covariância ou apenas matriz de covariância. Neste trabalho apresentaremos desde 
-                            métodos mais simples como o amostral até métodos mais complexos e amplamente utilizados na indústria do <i>Asset Management.</i>
+                            Neste trabalho, testaremos diversas técnicas de <i>Machine Learning</i> conhecidas como classificadoras. O objetivo é resolver o problema
+                            de categorização dos artigos escritos pela BBC e classificá-los em 5 gêneros: esporte, entretenimento, tecnologia, política e negócios.                        
                         </p>
-                        <h3>Os dados</h3>
                         <p>
-                            Os dados utilizados foram retirados do site <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" target="_blank">Fama & French</a> e 
-                            reporta os retornos de cada tipo de indústria nas Bolsas de Valores americanas, sendo que é dado pesos iguais para cada ação constituinte da respectiva indústria.
-                            Para a nossa análise utilizaremos os dados mensais a partir do ano de 1980. Em todos os métodos será utilizada uma janela dos últimos 60 meses ou 5 anos para a 
-                            estimação da matriz de covariâncias.
+                            Os dados podem ser encontrados no <a href="https://www.kaggle.com/yufengdev/bbc-fulltext-and-category">Kaggle</a>. Este conjunto de dados 
+                            possui um total de 2126 observações, sendo que cada observação possui a variável do título concatenado com o artigo e a variável com a devida
+                            classificação.
                         </p>
-                        <h3>Método amostral</h3>
-                        <p> O método amostral como o próprio nome diz utiliza apenas das amostras dos retornos para fazer a estimativa. Portanto, dada a matriz de retornos <i>X</i>, a matriz
-                            de covariância é calculada da seguinte forma:
-                                $$ \hat{\Sigma} = \frac{1}{n-1} X'X  $$ 
-                        </p>
-                        <h3>Constant Correlation Model</h3>
+                        <h3>Análise descritiva e pré-processamento</h3>
                         <p>
-                            Neste modelo, assume-se que todos os coeficientes de correlação são iguais, portanto os termos da matriz de covariância fora das diagonais são calculados da seguinte maneira:
-                                $$ \hat{\sigma}_{ij} = \hat{\sigma_i}\hat{\sigma_j}\hat{\rho}$$
-                                $$ \hat{\rho} = \frac{1}{N(N-1)}\sum_{i,j=1}^N \hat{\rho}_{ij}$$ 
-                            para todo \(i \ne j\).
-
+                            É possível visualizar, a partir do gráfico abaixo, que não há assimetria nos dados, ou seja, não existe nenhuma classe que é muito ou pouco 
+                            representativa no conjunto de dados. 
+                            <img src="medias/text_class/pizza.png" alt="Gráfico de pizza">
                         </p>
-
-                        <h3>Shrinkage</h3>
+                        <p>
+                            O próximo passo é limpar os dados a fim de removermos termos que podem dificultar o aprendizado dos modelos. Neste processo está incluso, 
+                            converter letras maiúsculas em minúsculas, remover números, pontuações e conversão das palavras para a forma radical. Abaixo está a nuvem de 
+                            palavras de todo o conjunto de dados e nesta <a id="gallery" class="swipebox" href="#">galeria</a> está a nuvem de palavras para cada classe.
+                            <img src="medias/text_class/cloud_total.png" alt="Nuvens de palavras">
+                        </p>
+                        <h3>Métodos de representação númerica</h3>
+                        <p>
+                            Para fazermos a representação númerica dos textos, compararemos dois métodos muito conhecidos, <i>Paragraph Vector</i> e <i>tf-idf</i>. O primeiro
+                            foi apresentado por <i>Mikilov e Le</i> neste <a href="https://arxiv.org/abs/1405.4053">artigo</a> e é uma técnica não supervisionada que aprende
+                            a representar variáveis de tamanhos fixos a partir de textos de tamanho variável, como frases parágrafos e documentos.
+                        </p>
+                        <p>
+                            O segundo método tf-idf, abreviação de <i>term frequency–inverse document frequency</i>, é uma medida estatística que tem o intuito de indicar a
+                            importância de uma palavra de um documento em relação a uma coleção de documentos. O valor tf-idf de uma palavra aumenta proporcionalmente à medida 
+                            que aumenta o número de ocorrências dela em um documento, no entanto, esse valor é equilibrado pela frequência da palavra no documento. Isso auxilia
+                            a distinguir o fato da ocorrência de algumas palavras serem geralmente mais comuns que outras.<sup>1</sup>
+                        </p>
+                        <h3>Modelos e Resultados</h3>
+                        <p>
+                            Os modelos testados no presente trabalho foram Regressão Logística, <i>Random Forest</i>, <i>Support Vector Classifier</i>, <i>Multi-layer Perceptron Classifier</i>
+                            e o <i>XG Boost</i>. Todos os modelos possuem hiperparâmetros a serem ajustados, portanto antes de ajustarmos os modelos, utilizamos uma função do pacote <i>sklearn</i>
+                            chamada <i>RandomizedSearchCV</i>, que ao invés de testar todos os valores do <i>grid</i>, testa combinações aleatórias entre os valores passados aos parâmetros.
+                        </p>
+                        <p>
+                            Após testarmos todos os modelos com o método <i>Paragraph Vector</i>, podemos concluir que não foi um modelo adequado de representação numérica para os textos apresentados
+                            nos artigos da BBC. Abaixo pode-se visualizar o mapa de calor referente a matriz de confusão do melhor modelo, <i>Random Forest</i>,  aplicado juntamente com o <i>Paragraph vector</i>,
+                            enquanto que é possível visualizar o mesmo gráfico para os outros modelos nesta <a id="gallery2" class="swipebox" href="#">galeria</a>.
+                            <img src="medias/text_class/confusion_matrix_DOC2VEC_RandomForest.png" alt="Confusion Matrix - RF"> 
+                        </p>
+                        <p>
+                            As classes que tiveram maior percentual de acerto foram esporte e negócios, mas com apenas 48% dos casos, o que resulta em uma acurácia de quase 42%, mas com precisão inferior a 40%.
+                            Abaixo está a curva de ROC também para o modelo de <i>Random Forest</i> (clique <a id="gallery3" class="swipebox" href="#">aqui</a> para ver os outros modelos). A curva nos ajuda a
+                            verificar que o modelo não consegue fazer boa distinção entre as classes.
+                            <img src="medias/text_class/randomforest_doc2vec.png" alt="ROC curve">
+                        </p> 
+                        <p>
+                            Por sorte, ainda resta apresentar a performance dos mesmos modelos após a aplicação da técnica de representação numérica <i>TF-IDF</i>. Ao contrário dos resultados já apresentados, com essa técnica 
+                            conseguimos atingir um resultado muito satisfatório, pois a pior performance foi do <i>XG Boost</i> com 94,83% de acurácia ao passo que o <i>Multi-layer Perceptron (MLP)</i> atingiu quase 98% de acurácia.
+                            Abaixo está a matrix de confusão do MLP, claramente é uma representação muito mais limpa por não haver números elevados fora das diagonais, sendo que na classe de Negócios o acerto foi de 100%. 
                             
+                        </p>
+                        <img src="medias/text_class/confusion_matrix_TF-IDF_MLP.png" alt="Confusion Matrix - MLP" style="padding-bottom:0px; border-bottom:0px; ">
+                        <figcaption style="font-size:70%">Clique <a id="gallery4" class="swipebox" href="#">aqui</a> para ver os outros modelos</figcaption>
                         <p>
-                            De forma generalizada, analisando o <i>paper Honey, I Shrunk the Sample Covariance Matrix</i> de Ledoit, O. e Wolf, M., podemos dizer que a ideia é mesclar um modelo simples como 
-                            o método amostral que tem a vantagem de ser não viesado com qualquer outro modelo mais estruturado, o qual no nosso caso será o <i>Constant Correlation Model</i>. Desta forma, a 
-                            matriz de covariância é calculada conforme descrito abaixo:
-                                $$ \hat{\Sigma}_{Shrink} = \hat{\delta}^* F + (1-\hat{\delta}^*)S$$
-                            onde F é o modelo que decidimos mesclar, S é a matriz de covariância amostral e \(\hat{\delta}^* \in [0,1]\). 
+                            A curva ROC reafirma a informação da matriz de confusão que o MLP é quase perfeito nestas condições e consegue distinguir todas as classes muito bem. Portanto, o AUC para todas as classes se aproxima de 1.
+                            Embora haja algumas diferenças, em geral todos os gráficos ROC se assemelham e possuem 99% como menor AUC.
+                            
+                        </p>
+                        <img src="medias/text_class/MLP.png" alt="ROC curve - MLP" style="padding-bottom:0px; border-bottom:0px; ">
+                        <figcaption style="font-size:70%">Clique <a id="gallery5" class="swipebox" href="#">aqui</a> para ver os outros modelos</figcaption>
+                        <p>
+                            Por fim, abaixo está a tabela que sumariza todos os modelos e medidas de performance caso haja interesse do leitor em saber mais detalhadamente a performance individual de algum dos modelos. 
+                        </p>
+                        <img src="medias/text_class/tabela_comparativa.png" alt="Tabela Comparativa">
+                        <p>
+                            Apesar de todas as considerações feitas neste trabalho não é possível dizer que há superioridade de uma das técnicas de representação numérica, tampouco de qualquer dos modelos de <i>Machine Learning</i>. 
+                            Cada situação demanda requisitos diferentes e, portanto, pode se adequar melhor a modelos diversos. Entretanto, para este conjunto de dados, a combinação da técnica TF-IDF com o MLP foi a melhor e alcançou um 
+                            resultado excelente.
                         </p>
 
-                        <h3>Média móvel ponderada exponencialmente</h3>
-                        <p>
-                            Assumindo que a volatilidade dos retornos dos ativos não é estacionária, não podemos ponderar da mesma forma retornos muito antigos e retornos mais recentes, portanto 
-                            uma das alternativas é usar a média móvel ponderada exponencialmente, a qual atribui maiores pesos aos retornos mais recentes e é dada pela seguinte forma:
-                                $$ \sigma_T^2 = \sum_{t=1}^T \alpha_t R_t^2 $$
-                                onde $$\alpha_t = \frac{\lambda^{T-t}}{\sum_{t=1}^T \lambda^{T-t}}$$
-                            \(\lambda\) é o parâmetro de decaimento que está entre 0 e 1, isto é, quanto menor \(\lambda\) menor é o peso atribuído aos retornos mais antigos, \(R_t\) é o retorno
-                            no tempo \(t\) e \(\alpha_t\) é o peso para o tempo \(t\).
-                        </p>
-                        <h3>Modelos GARCH (Generalized Autoregressive Conditional Heteroskedacity)</h3>
-                        <p>
-                            Historicamente, os modelos ARCH foram uma alternativa de primeira linha desenvolvida para competir com as médias exponenciais e uma rápida olhada em sua forma funcional revela o porquê. 
-                            Assumindo retornos com média zero, sua estrutura é muito simples:
-                                $$ \sigma_T^2 = \gamma V_L + \sum_{t+1}^T \alpha_t R_t^2$$
-                                onde $$\gamma + \sum_{t+1}^T \alpha_t = 1$$
-                            e \(V_L\) é um termo que representa a variância de longo prazo.Já os modelos tipo GARCH tem um pequeno aperfeiçoamento que é a adição de um termo que relaciona a volatilidade do tempo 
-                            \(t\) com a volatilidade do tempo \(t-1\), como apresentado a seguir:
-                                $$ \sigma_T^2 = \gamma V_L + \sum_{t+1}^T \alpha_t R_t^2 + \beta \sigma_{T-1}^2$$
-                        </p>
-
-                        <h3> Modelos ortogonais</h3>
-                            Os modelos ortogonais aplicados aos métodos de média móvel ponderada exponencialmente e ao método GARCH são uma pequena variação, na qual é feita um preprocessamento dos dados, aplicando
-                            o método estatístico de análise multivariada PCA (Principal Component Analysis), o qual transforma a matriz dos retornos em uma matriz de vetores ortogonais, em outras palavras, torna os
-                            retornos não correlacionados.
-
-                        <h3>Resultados</h3>
-                        <p>
-                            Examinando a tabela abaixo, podemos dizer que o modelo com a estimativa de matriz de covariância via média móvel ponderada exponencialmente em sua versão ortogonal possui maior retorno 
-                            anualizado e maior <i>sharpe ratio</i>, seguido diretamente pela sua versão tradicional. O ganho destes modelos em relação a <i>sharpe Ratio</i> quando comparados ao portfólio com todos
-                            os pesos iguais (EW) e ao portfólio com a estimativa amostral foi de quase 80% e 7%, respectivamente.
-                            <img src="medias/cov_matrix_p1/tabela.png" alt="Tabela com estatísticas">
-                        </p>
-                        <p>
-                            Em terceiro e quarto lugares estão a estimativa amostral e o modelo GARCH, respectivamente. É importante notar que o retorno anualizado do modelo GARCH não foi muito inferior aos modelos de média móvel, o 
-                            que deixou a sua <i>sharpe ratio </i> em nível inferior foi a sua maior volatilidade, o que seria um sinal de que não cumpriu bem o seu papel. Entretanto, se nos atentarmos ao gráfico abaixo o modelo GARCH 
-                            conseguiu uma recuperação bem mais acelerada que os outros modelos após a crise dos <i>sub-primes</i> em 2009 e isto foi muito devido ao fato de que este modelo possui um número efetivo de constituintes (ENC 
-                            na tabela) muito maior que os seus concorrentes. Quando o mercado mergulha em uma crise profundo assim como ocorreu em 2009, as correlações entre os ativos aumentam significativamente, portanto um portfólio 
-                            mais diversificado, que é o caso do modelo GARCH, consegue um resultado mais rápido.
-                            <img src="medias/cov_matrix_p1/CovarianceMatrix.png" alt="Retornos Acumulados">
-                        </p>
-                        <p>
-                            Os modelos ortogonais proporcionaram uma melhora em ambos os casos, média ponderada e GARCH, em relação a <i>sharpe ratio</i>, mas a melhora não foi tão significativa no caso da média ponderada, enquanto que
-                            para o modelo GARCH houve um aumento de 30%. Um segundo aperfeiçoamento no modelo GARCH foi considerar que os retornos não possuem distribuição Gaussiana, mas sim skewed T-student, isto é, uma distribuição 
-                            T-student com assimetria, o que representa melhor os dados de retornos de ações, pois como se pode ver na coluna <i>Skewness</i> da tabela acima todos os métodos possuem valores negativos e alguns próximos de -1,
-                            sendo que a distribuição Normal possui <i>skewness</i> igual a 0. O método Garch Ortogonal proporcionou uma melhora adicional de quase 6% na <i>sharpe ratio</i>, quando comparado com a sua versão tradicional.
-                        </p>
-                        <p>
-                            Por fim, é natural dizer que caso a nossa amostra tivesse fim no ano de 2015, o melhor modelo seria o GARCH. Portanto, não é possível dizer que existe um modelo que é superior a todos os outros, soberano. Cada 
-                            tipo de estimativa tem melhor performance em cenários específicos, nos deixando uma oportunidade para em um posterior trabalho fazer uma previsão de mudanças nos regimes econômicos e mesclar os modelos de estimativa 
-                            da matriz de covariância para encontrar em qual regime cada um dos modelos se encaixa melhor.
-                        </p>
                         
 
+                        <span id="ref"><sup>1</sup>https://pt.wikipedia.org/</span>
                     </article>
                     <br>
                     <a href="#topo" id="BackToTop">Voltar ao topo</a>
                     <br>
                     <br>
-                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/covariance_matrix" target="_blank">github <i class="fa fa-github"></i></a>.</span>
+                    <span id="github-ind">*Todos os projetos desenvolvidos nesse site possuem os códigos fontes e resultados armazenados no <a href="https://github.com/vinisaurin/text_classification" target="_blank">github <i class="fa fa-github"></i></a>.</span>
                 </div>
             </div>
         </div>
@@ -245,11 +235,8 @@
             <p> Vinícius Saurin &copy; 2020</p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="js/jquery-2.1.0.js"></script>
         <script src="js/jquery.swipebox.js"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>
             $(function() {
                 $('.toggleNav').on('click', function(){
@@ -286,22 +273,54 @@
                 $( '#gallery' ).click( function( e ) {
 	                e.preventDefault();
                     $.swipebox( [
-                        { href:'medias/seg_pub_rj/total_furtos.png', title:'Furtos' },
-                        { href:'medias/seg_pub_rj/violentos.png', title:'Violentos' },
-                        { href:'medias/seg_pub_rj/outros_ctra_patr.png', title:'Outros crimes contra o patrimônio' },
-                        { href:'medias/seg_pub_rj/drogas.png', title:'Drogas' }, 
-                        { href:'medias/seg_pub_rj/transito.png', title:'Transito' }
+                        { href:'medias/text_class/cloud_sport.png', title:'Esporte'},
+                        { href:'medias/text_class/cloud_entertainment.png', title:'Entretenimento'},
+                        { href:'medias/text_class/cloud_business.png', title:'Negócios'},
+                        { href:'medias/text_class/cloud_tech.png', title:'Tecnologia'}, 
+                        { href:'medias/text_class/cloud_politics.png', title:'Política'}
 	                ] );
                 } );
 
                 $( '#gallery2' ).click( function( e ) {
 	                e.preventDefault();
                     $.swipebox( [
-                        { href:'medias/seg_pub_rj/Gráfico_barras_empilhadas_Capital.png', title:'Capital' },
-                        { href:'medias/seg_pub_rj/Gráfico_barras_empilhadas_Interior.png', title:'Interior' },
-                        { href:'medias/seg_pub_rj/Gráfico_barras_empilhadas_GrandeNiteroi.png', title:'Grande Niterói' },
+                        { href:'medias/text_class/confusion_matrix_DOC2VEC_MLP.png', title:'Multi-layer Perceptron' },
+                        { href:'medias/text_class/confusion_matrix_DOC2VEC_RegLog.png', title:'Regressão Logística' },
+                        { href:'medias/text_class/confusion_matrix_DOC2VEC_SVC.png', title:'Support Vector Classifier' },
+                        { href:'medias/text_class/confusion_matrix_DOC2VEC_XGBoost.png', title:'XG Boost' }
 	                ] );
                 } );
+
+                $( '#gallery3' ).click( function( e ) {
+	                e.preventDefault();
+                    $.swipebox( [
+                        { href:'medias/text_class/MLP_doc2vec.png', title:'Multi-layer Perceptron' },
+                        { href:'medias/text_class/logregression_doc2vec.png', title:'Regressão Logística' },
+                        { href:'medias/text_class/svc_doc2vec.png', title:'Support Vector Classifier' },
+                        { href:'medias/text_class/xgboost_doc2vec.png', title:'XG Boost' }
+	                ] );
+                } );
+
+                $( '#gallery4' ).click( function( e ) {
+	                e.preventDefault();
+                    $.swipebox( [
+                        { href:'medias/text_class/confusion_matrix_TF-IDF_MLP.png', title:'Multi-layer Perceptron' },
+                        { href:'medias/text_class/confusion_matrix_TF-IDF_RegLog.png', title:'Regressão Logística' },
+                        { href:'medias/text_class/confusion_matrix_TF-IDF_SVC.png', title:'Support Vector Classifier' },
+                        { href:'medias/text_class/confusion_matrix_TF-IDF_XGBoost.png', title:'XG Boost' }
+	                ] );
+                } );
+
+                $( '#gallery5' ).click( function( e ) {
+	                e.preventDefault();
+                    $.swipebox( [
+                        { href:'medias/text_class/MLP.png', title:'Multi-layer Perceptron' },
+                        { href:'medias/text_class/logregression.png', title:'Regressão Logística' },
+                        { href:'medias/text_class/svc.png', title:'Support Vector Classifier' },
+                        { href:'medias/text_class/xgboost.png', title:'XG Boost' }
+	                ] );
+                } );
+
             });
         </script>
     </body>
