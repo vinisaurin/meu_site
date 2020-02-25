@@ -8,7 +8,7 @@
         <meta charset= 'utf-8'> <!-- Compreender simbolos do português -->
         <meta name = 'author' content = 'Vinícius Saurin'> <!-- Autor do site -->
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <link rel="canonical" href="https://www.viniciussaurin.com.br/portfolio_crise_diesel.php">
+        <link rel="canonical" href="https://www.viniciussaurin.com.br/portfolio_seg_pub_rj.php">
         <link rel="apple-touch-icon" sizes="180x180" href="/medias/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/medias/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/medias/favicon/favicon-16x16.png">
@@ -95,6 +95,7 @@
                                 <li> <a href="portfolio_crise_diesel.php" class="link-portfolio"> Crise dos combustíveis</a></li>
                                 <li> <a href="portfolio_web_scraping_rn.php" class="link-portfolio"> Web Scraping</a></li>
                                 <li> <a href="portfolio_seg_pub_rj.php" class="link-portfolio"> Segurança Pública RJ </a></li>
+                                <li> <a href="portfolio_uber_pickups.php" class="link-portfolio"> Uber Pickups</a></li>
                                 <!-- <li> <a href="" class="link-portfolio"> Projeto 4 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 5 </a></li>
                                 <li> <a href="" class="link-portfolio"> Projeto 6 </a></li>

@@ -89,6 +89,23 @@
                     <div class="demo-card demo-card--step1">
                         <div class="head">
                             <div class="number-box">
+                                <span>26.02</span>
+                            </div>
+                            <h2>Uber Pickup's</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                Projeto de <i>Data Visualization</i> do conjunto de dados disponibilizado pelo <i>Kaggle</i> a respeito das corridas feitas 
+                                por motoristas de Uber em Nova York nos meses de Jul/14 e Set/14.
+                            </p>
+                            <img src="medias/uber_pickups/main.png" alt="Foto">
+                            <p class="link-sm"><a href="portfolio_uber_pickups.php">Saiba mais</a></p>
+                        </div>
+                    </div>
+            
+                    <div class="demo-card demo-card--step2">
+                        <div class="head">
+                            <div class="number-box">
                                 <span>16.02</span>
                             </div>
                             <h2>Classificação de textos</h2>
@@ -103,7 +120,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step2">
+                    <div class="demo-card demo-card--step3">
                         <div class="head">
                             <div class="number-box">
                                 <span>05.02</span>
@@ -121,7 +138,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step3">
+                    <div class="demo-card demo-card--step4">
                         <div class="head">
                             <div class="number-box">
                                 <span>30.01</span>
@@ -139,7 +156,7 @@
                         </div>
                     </div>
             
-                    <div class="demo-card demo-card--step4">
+                    <div class="demo-card demo-card--step5">
                         <div class="head">
                             <div class="number-box">
                                 <span>21.01</span>
@@ -156,8 +173,8 @@
                             <p class="link-sm"><a href="portfolio_web_scraping_rn.php">Saiba mais</a></p>
                         </div>
                     </div>
-            
-                    <div class="demo-card demo-card--step5">
+
+                    <div class="demo-card demo-card--step6">
                         <div class="head">
                             <div class="number-box">
                                 <span>16.01</span>
@@ -173,8 +190,7 @@
                             <p class="link-sm"><a href="portfolio_rl_10armedbandit.php">Saiba mais</a></p>
                         </div>
                     </div>
-
-                    <div class="demo-card demo-card--step6">
+                    <div class="demo-card demo-card--step7">
                         <div class="head">
                             <div class="number-box">
                                 <span>08.01</span>
@@ -190,19 +206,6 @@
                             <p class="link-sm"><a href="portfolio_crise_diesel.php">Saiba mais</a></p>
                         </div>
                     </div>
-                    <!-- <div class="demo-card demo-card--step7">
-                        <div class="head">
-                            <div class="number-box">
-                                <span>07</span>
-                            </div>
-                            <h2>Conversion</h2>
-                        </div>
-                        <div class="body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                            <img src="https://placehold.it/1000x500" alt="Graphic">
-                            <p class="link-sm"><a href="#">Saiba mais</a></p>
-                        </div>
-                    </div> -->
                 </div>
             </section>        
         </div>
